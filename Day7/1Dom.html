@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Manipulation</title>
+</head>
+<body>
+    <div>
+        <div class="First">
+            <h1>I am First child</h1>
+        </div>
+
+        <div class="Second">
+            <h1>I am second child</h1>
+        </div>
+
+        <div class="Third">
+            <h1>I am Third child</h1>
+        </div>
+
+        <button onclick="ContentChange()">Click Me</button>
+    </div>
+    <script>
+        console.log("Hello")
+        console.log(document.getElementsByTagName('h1'))
+        console.log(document.getElementsByName("am"))
+
+        //query selector
+      //it allow to select tag,Id,Class irrespective of the selectById Or selecctByClass
+
+      //document.querySelector-->it chooses only first match
+      //to choose all matches use  document.querySelectorAll-->This is not true,it will just return thr no.of matching elements 
+      function  ContentChange(){
+        document.querySelector('h1').innerHTML="I am changed content"
+         console.log(document.querySelectorAll('h1').innerHTML="I am changed content")
+      }
+    </script>
+</body>
+</html>

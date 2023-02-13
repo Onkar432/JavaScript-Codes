@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        #four{
+       display: flex;
+       justify-content: center;
+       height: 300px;
+        }
+    </style>
+</head>
+<body>
+   
+
+         <div class="but" id="four">
+            <button> Event -Object </button>
+         </div>
+
+    <script>
+   
+        let four=document.querySelector('#four')
+        const checkEvent=()=>{
+            alert("Hum dekh chuke hhe last fourth way me")
+            console.log(event)
+            console.log(event.type)  //click
+            console.log(event.target)
+        }
+      
+        four.addEventListener('click',checkEvent)
+    </script>
+</body>
+</html>

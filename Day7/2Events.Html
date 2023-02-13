@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events-JavaScript</title>
+    <link rel="stylesheet" href="Events.css">
+</head>
+<body>
+    <div class="main">
+        <div class="but">
+           <button onclick="alert('I am awesome,But no one use me')"> First Way->alert</button>
+        </div>
+
+        <div class="but">
+            <button onclick="CallByFunction()"> Second Way->alert</button>
+         </div>
+
+         <div class="but" id="third">
+            <button> Third Way->alert</button>
+         </div>
+
+         <div class="but" id="four">
+            <button> Fourth Way->alert</button>
+         </div>
+
+    </div>
+    <script>
+        //Second Way-->
+        function CallByFunction(){
+            alert("I am widely Used")
+        }
+        
+        //Third Way--->
+        let thirdFunc=document.getElementById('third');
+        thirdFunc.onclick=function(){
+            alert("Most common way of writing events")
+        }
+        
+        //Fourth Way
+        let four=document.querySelector('#four')
+        /*1st aru-->Konsa event*
+          2nd aru-->Function call*/
+        four.addEventListener('click',()=>{
+            alert("I love this way of writing events")
+        })
+    </script>
+</body>
+</html>

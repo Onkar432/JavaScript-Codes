@@ -1,0 +1,49 @@
+Events in javaScript::>---:::-->
+
+1-->Events are the "things" that happend to HTML Document
+
+2-->Action on the webPage
+
+There Are four ways to write Events in javaScript
+
+1-->alert()
+
+2-->By calling the function
+
+3-->Using Inline Events(Using referances by Id and Classs)--->problem of overHead, As it folllows top down approch
+
+4-->Using Event Listeners-->No overHead problem, Most advanced
+
+
+         /****************************************EVENT OBJECT***********************************************/
+                
+Event object is store all the information about the event such as, When it is fired, Type of event etc..
+
+
+   /**************************************** MOUSE EVENT OF JAVASCRIPT***********************************************/
+   -->This event occurs when html intereact with HTML
+   1--->onmousedown //changes when mouse is down
+   2--->onmouseUp   //changes when mouse is up
+   3-->mouseenter   //Changes when mouse is hover on box
+   4-->mouseleave   //Changes when mouse  hover is remove from  box
+
+      /**************************************** KEYBOARD EVENT OF JAVASCRIPT***********************************************/
+
+1-->onkeypress   --->It shows changes when input is enter in box
+
+2-->onkeydown    -->It shows changes when   data is deleted from box
+
+3-->onkeyup       -->It shows changes when   data is Inserted to box
+
+
+ /**************************************** Input EVENT OF JAVASCRIPT***********************************************/
+change -->Act according to input
+
+
+/**************************************** Timing EVENT OF JAVASCRIPT***********************************************/
+
+Window object allows to execute code at certain time by timing events
+
+1-->setTimeout(function,milisecond)==execute function after specified no.of miliseconds
+
+2-->setIntervals(function,milisecond)==execute function after every specified no.of miliseconds

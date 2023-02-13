@@ -1,0 +1,72 @@
+<!-- 
+What is Event propagation?
+ANS:-It determines in which order element receive the order.
+
+What is Event Bubbling?
+ANS:-WhenEver we have div inside div,The inner div i.e child div,And  outer div i.e parent If we are trying to add event to child it will effect on parent also. By default it is in Bubbling phase.To overcomr from this we have to use  event.stopPropagation();
+
+Event capturing?
+ANS:-It is reverse of Bubbling.
+WhenEver we have div inside div,The inner div i.e child div,And  outer div i.e parent If we are trying to add event to parent it will effect on child also.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Propagation</title>
+    <style>
+        .Parent {
+            width: 500px;
+            height: 500px;
+            display: flex;
+
+            background-color: rgb(255, 131, 29);
+            flex-wrap: wrap;
+        }
+
+        .Child {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Parent" id="pID">
+        <div class="Child" id="cID"></div>
+    </div>
+    <script>
+parent = document.querySelector('#pID.Parent');
+child = document.querySelector('#cID.Child');
+
+        const parentCall=()=>{
+            alert("I am parent")
+        };
+
+        const childCall=()=>{ 
+            //event.stopPropagation(); Bubbling 
+             //issue occur  if it is not wriiten 
+            alert("I am child")
+        };
+
+        
+   //Event Bubbling   
+     child.addEventListener('click',childCall,false)
+        parent.addEventListener('click',parentCall,false)
+
+        // Event capturing child.addEventListener('click',childCall,true)
+        // parent.addEventListener('click',parentCall,true)
+
+        // Third argument in addEventListener is for Event propagation if nothing is passed as third argument that byDefault is fale means Bubbling top To Bottom .But if we pass True then it will be the form of Event capturing from parent to child.
+        
+    </script>
+</body>
+
+</html>

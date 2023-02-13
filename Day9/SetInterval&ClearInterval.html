@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Out-Interval</title>
+    <style>
+        body{
+            background-color: darkcyan;
+        }
+        div {
+    
+       
+        height: 400px;
+        border: 2px solid rgb(219, 155, 155);
+        box-shadow: 0px 0px 10px 0px rgb(5, 0, 0);
+      }
+      #numbers{
+        color: White;
+        font-size: 50px;
+        margin-left: 50%;
+       
+      }
+
+      button {
+        box-shadow: 0px 0px 10px 0px rgb(5, 0, 0);
+        margin: 0 10px;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-left: 50%;
+
+      }
+      #btn2
+      {
+       
+       margin-top:20px ;
+      }
+      #btn3
+      {
+       
+       margin-top:20px ;
+      }
+       
+
+    </style>
+</head>
+<body>
+    <div>
+        <p id="numbers"></p>
+        <br>
+        <button id="btn1">Start</button>
+        <button id="btn2">Stop</button>
+        <button id="btn3">Reset</button>
+        
+        
+    </div>
+    <script>
+        const numbers=document.querySelector('#numbers')
+        const button1=document.querySelector('#btn1')
+        const button2=document.querySelector('#btn2')
+        const button3=document.querySelector('#btn3')
+        let count=0;
+        let timeref;
+        const ShowTime = () => {
+            numbers.innerHTML ='Loading...';
+            timeref= setInterval(() => {
+                numbers.innerHTML = `${count}`;
+                count++;
+            }, 1000)
+
+        }
+        button1.addEventListener('click',ShowTime);
+        button2.addEventListener('click',()=>{
+            clearInterval(timeref);
+        });
+
+        button3.addEventListener('click',()=>{
+            count=0;
+            numbers.innerHTML=0;
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-Events</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(221, 180, 180), rgb(31, 19, 19));
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            box-shadow: 0px 0px 10px 0px rgb(47, 18, 211);
+        }
+
+        div {
+          
+            box-shadow: 0px 0px 10px 0px rgb(3, 0, 0);
+        }
+
+        p {
+            color: white;
+            font-size: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .btn {
+            display: flex;
+           justify-content: space-between;
+            margin-left: 50%;
+            background-color: rgb(241, 245, 12);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+
+
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <p>Want To Know My Name ?</p>
+            <p id="showname"></p>
+            <br>
+           
+                <button class="btn">YES</button>
+            
+          
+        </div>
+    </div>
+
+      
+    <script>
+        const showname = document.querySelector('#showname');
+        const btn = document.querySelector('.btn');
+
+        const showmyname = () => {
+            showname.innerHTML = "Wait.."
+            setTimeout(() => {
+                showname.innerHTML = "Onkar Pathak"
+            }, 1000)
+        }
+
+        btn.addEventListener('click', showmyname);
+
+    </script>
+</body>
+
+</html>

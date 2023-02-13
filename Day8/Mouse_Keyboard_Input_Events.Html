@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!--                     MOUSE EVENT STYLE
+    <style>
+        body{
+            background-color: purple;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+          margin-top: 25%;
+        }
+    </style> -->
+
+
+    <!-- KEYBOARD STYLE -->
+    <!-- <style>
+        body {
+            background-color: purple;
+        }
+        input{
+           
+            display: flex;
+            height: 100px;
+            width: 500px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            background-color: salmon;
+            margin-top: 255px;
+
+        }
+        p{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 183, 255);
+            font-size: large;
+        }
+    </style> -->
+
+    <!-- INPUT EVENT STYLE -->
+    <!-- <style>
+body{
+    background-color: rgb(190, 136, 240);
+    box-sizing: border-box;
+}
+.main-div{
+    display: flex;
+    background-color: rgb(46, 165, 149);
+   justify-content: center;
+   
+   border: 2px solid rgb(255, 251, 3);
+}
+#name{
+    background-color: wheat;
+    margin: 10px;
+    width: 250px;
+    height: 60px;
+   
+}
+#iceCreames{
+    background-color: wheat;
+    margin: 10px;
+    width: 250px;
+    height: 60px;
+}
+#result{
+    color: rgb(188, 255, 5);
+    margin: 10px;
+    width: 250px;
+    height: 60px;
+}
+
+    </style>
+</head> -->
+
+<body>
+    <!-- 1----)Mouse up and mouse down events -->
+
+
+    <!-- <p id="para" onmousedown="MouseDown()" onmouseup="MouseUp()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro obcaecati nostrum a eius impedit beatae reiciendis, repellendus quidem deleniti vel similique earum non fugit. Architecto mollitia quam rerum accusantium ipsa.
+    </p>
+    <script>
+        function MouseDown(){
+          document.getElementById('para').style.color="red";
+
+        }
+
+        function MouseUp(){
+          document.getElementById('para').style.color="Pink";
+
+        }
+
+    </script> -->
+
+
+    <!-- KEYBOARD EVENTS
+    <div class="main">
+        <div id="box">
+
+        </div>
+    </div>
+    <script>
+        const box=document.getElementById('box');
+        box.addEventListener('mouseenter',()=>{
+            box.style.backgroundColor='red';
+            console.log("Mouse is Enterd on box")
+        })
+
+        box.addEventListener('mouseleave',()=>{
+            box.style.backgroundColor='white';
+            console.log("Mouse leaved the box")
+        })
+    </script> -->
+
+    <!-- KEYBOARD EVENTS -->
+    <!-- <div>
+        <input type="text" class="effect-1" onkeypress="KeyPress()" onkeydown="KeyDown()" onkeyup="keyUp()">
+        <br>
+        <p id="keys"></p>
+    </div>
+
+    <script>
+        const KeyPress = () => {
+            document.getElementById('keys').innerHTML = `you pressed ${event.key} and its code is ${event.code} `
+
+        }
+
+        const keyUp = () => {
+            document.getElementById('keys').innerHTML = "Key is Up."
+
+        }
+
+        const KeyDown = () => {
+            document.getElementById('keys').innerHTML = "Key is Down."
+
+        }
+
+    </script> -->
+
+
+    <!-- InputEvents -->
+
+    <!-- <div class="main-div">
+        <div>
+            <label for="">Your name</label>
+            <input type="text" name="" id="name">
+            <br>
+
+            <label for="">Choose an Ice-cream Flavor
+                <select name="iceCreames" id="iceCreames">
+
+                    <option value="">Select One</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Vanila">Vanila</option>
+                    <option value="Straberry">Straberry</option>
+
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const iceCreams = document.getElementById('iceCreames')
+
+        iceCreams.addEventListener('change', () => {
+
+            const inputName = document.getElementById('name').value;
+            const flav = document.getElementById('iceCreames').value;
+
+            const result = document.getElementById('result')
+
+            result.innerHTML = `Mr ${inputName} select ${flav} ice-creame flavor`
+
+        });
+
+
+    </script> -->
+</body>
+
+</html>
